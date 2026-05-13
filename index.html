@@ -1,21 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>BeaTrackFam | Checkout</title>
-    <style>
-        body { font-family: sans-serif; text-align: center; padding: 50px; }
-        .product-card { border: 1px solid #ddd; padding: 20px; display: inline-block; border-radius: 8px; }
-        .buy-button { background: #6772e5; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; }
-    </style>
-</head>
-<body>
-    <h1>Your Shopping Cart</h1>
-    <div class="product-card">
-        <h2>Sunflower Signature Mug</h2>
-        <p>Select your size at checkout</p>
-        <!-- Replace the # with your actual Stripe Payment Link -->
-        <a href="#" class="buy-button">Complete Purchase</a>
-    </div>
-</body>
-</html>
+<style>
+  /* Bento Grid Styling */
+  .shop-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  .product-card {
+    background: #1a1a1a;
+    color: white;
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid #333;
+    transition: transform 0.2s;
+  }
+  .product-card:hover { transform: scale(1.02); }
+  .cart-header { text-align: center; margin-bottom: 40px; }
+</style>
+
+<div class="cart-header">
+  <h1>BeaTrackFam Checkout</h1>
+  <p>Secure payment processed by Stripe</p>
+</div>
+
+<div class="shop-container">
+  <!-- Mug Product Card -->
+  <div class="product-card">
+    <img src="YOUR_MUG_IMAGE.jpg" width="100%" style="border-radius: 8px;">
+    <h2>Sunflower Signature Mug</h2>
+    <p>Premium ceramic, available in 11oz and 15oz.</p>
+    
+    <!-- PASTE YOUR STRIPE BUY BUTTON CODE BELOW -->
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+    <stripe-buy-button
+      buy-button-id="YOUR_ID_HERE"
+      publishable-key="YOUR_KEY_HERE">
+    </stripe-buy-button>
+  </div>
+</div>

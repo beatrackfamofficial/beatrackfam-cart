@@ -1,1 +1,1 @@
-# beatrackfam-cart
+https://checkout.beatrackfam.info

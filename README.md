@@ -1,1 +1,1 @@
-https://checkout.beatrackfam.info
+http://checkout.beatrackfam.info
